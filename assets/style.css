@@ -252,7 +252,7 @@ html[dir=rtl] .app__logo-wrapper {
 @media (max-width: 768px) {
   .app__buttons {
     margin-left: 0;
-    margin-bottom: 64px;
+    margin-bottom: 0px;
   }
   .app__buttons--mobile {
     display: flex;
@@ -517,5 +517,17 @@ html[dir=rtl] .app__logo-wrapper {
 
   .app__download-buttons img {
     width: 100px;
+  }
+}
+
+/* Small screen adjustments */
+@media (max-width: 600px) {
+  .screenshots {
+    display: none; /* Hides container on small screens */
+  }
+
+  .app__button-ios img {
+    width: 100px;
+    margin-bottom: 0px;
   }
 }
