@@ -1,0 +1,521 @@
+:root {
+  --font-xl: 42px;
+  --font-lg: 24px;
+  --font-md: 20px;
+  --font-sm: 18px;
+  --font-xs: 16px;
+  --font-xxs: 14px;
+
+  --font-title1: 'Inter', sans-serif;
+  --font-title2: 'Inter', sans-serif;
+  --font-headline: 'Inter', sans-serif;
+  --font-body1: 'Inter', sans-serif;
+  --font-body2: 'Inter', medium;
+  --font-caption: 'Inter', sans-serif;
+
+  --primary-color: #1E1E78;  /* Main color */
+  --secondary-color: #4E4E9D; /* Secondary color */
+  --background-gradient: linear-gradient(65deg, rgba(139, 0, 0, 0.9), rgba(0, 0, 139, 0.9)); /* Darker red and blue */
+  --text-color: #FFFFFF;      /* Text color */
+  --link-color: #BB5F7E;      /* Link color */
+  --button-bg: var(--background-gradient); /* Button background */
+}
+
+body {
+  font-family: var(--font-body1);
+  font-size: 16px;
+  color: white;
+}
+
+h2 {
+  font-family: var(--font-title2);
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-xl: 18px;
+    --font-lg: 16px;
+    --font-md: 14px;
+    --font-sm: 12px;
+    --font-xs: 12px;
+    --font-xxs: 12px;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: var(--text-color);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-size: var(--font-md);
+  background: var(--background-gradient);
+  line-height: 1.4;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+.button {
+  display: flex;
+  background: var(--button-bg);
+  font-family: "Heebo", sans-serif;
+  color: var(--text-color);
+  display: inline-flex;
+  font-size: var(--font-xxs);
+  letter-spacing: 0px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  justify-content: center;
+  padding: 16px 32px;
+  text-align: center;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.15s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button--link {
+  background: rgba(0, 0, 0, 0);
+  color: var(--link-color);
+  box-shadow: none;
+}
+
+.button--link:hover {
+  color: var(--secondary-color);
+}
+
+.accent {
+  color: var(--link-color);
+}
+
+.container {
+  max-width: 960px;
+  padding: 0 30px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-family: "Heebo", sans-serif;
+  color: var(--text-color); /* Changed to white */
+}
+
+.container-desktop {
+  max-width: 960px;
+  padding: 0 30px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .container-desktop {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+.tobi-zoom__icon {
+  display: none;
+}
+
+.app__header {
+  display: flex;
+  flex-direction: row;
+  margin-top: 128px;
+  margin-bottom: 128px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .app__header {
+    align-items: flex-start;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+}
+
+.app__logo-wrapper {
+  display: inline-block;
+  background-image: url("ios-mask-border-128.svg");
+  background-size: contain;
+  max-width: 250px;
+  max-height: 250px;
+  padding: 1px;
+  margin-right: 64px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+html[dir=rtl] .app__logo-wrapper {
+  margin-left: 64px;
+  margin-right: 0;
+}
+
+@media (max-width: 768px) {
+  .app__logo-wrapper {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 16px;
+  }
+}
+
+.app__logo {
+  border-radius: 22.5%;
+  mask-size: cover;
+  width: 100%;
+  height: auto;
+}
+
+.app__name {
+  font-size: var(--font-xl);
+  margin: 0;
+  color: var(--text-color);
+}
+
+.app__description {
+  font-size: var(--font-lg);
+  color: var(--text-color); /* Changed to white */
+}
+
+@media (max-width: 768px) {
+  .app__description {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+}
+
+.app__screenshots-list {
+  display: grid;
+  grid-template-columns: repeat(6, 200px);
+  grid-column-gap: 20px;
+  padding: 30px 0;
+}
+
+@media (max-width: 768px) {
+  .app__screenshots-list {
+    padding: 32px;
+    width: 800px;
+  }
+}
+
+.app__screenshot {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+  cursor: pointer;
+}
+
+.app__screenshot:hover {
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.app__screenshots-wrapper {
+  overflow-y: auto;
+}
+
+.app__buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -9.8px;
+}
+
+.app__buttons--mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .app__buttons {
+    margin-left: 0;
+    margin-bottom: 64px;
+  }
+  .app__buttons--mobile {
+    display: flex;
+    justify-content: center;
+  }
+  .app__buttons--desktop {
+    display: none;
+  }
+}
+
+.app__button-play img {
+  width: 176.4px;
+}
+
+.app__button-ios img {
+  width: 250px;
+}
+
+.app__button-web {
+  margin-left: 12px;
+}
+
+.app__button-web img {
+  width: 157px;
+}
+
+@media (max-width: 768px) {
+  .app__button-play img {
+    width: 126px;
+  }
+  .app__button-ios img {
+    width: 100px;
+  }
+  .app__button-web {
+    margin-left: 8px;
+  }
+  .app__button-web img {
+    width: 112px;
+  }
+}
+
+.app__section-title {
+  font-size: var(--font-lg);
+  color: var(--text-color); /* Changed to white */
+}
+
+.app__section {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .app__section {
+    margin-bottom: 64px;
+  }
+}
+
+.app__featured-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 32px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .app__featured-content {
+    display: block;
+    padding: 32px;
+  }
+}
+
+.app__featured-image {
+  width: 100%;
+  margin: auto;
+}
+
+.footer {
+  padding: 16px 0;
+  font-size: var(--font-xs) !important;
+  color: var(--text-color);
+}
+
+.footer a {
+  font-size: var(--font-xs) !important;
+  color: var(--link-color);
+}
+
+.footer__container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+
+.footer__link {
+  margin-left: 32px;
+}
+
+@media (max-width: 768px) {
+  .footer__link {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+}
+
+.page {
+  max-width: 960px;
+  padding: 0 30px;
+  margin: auto;
+}
+
+.darkmode-toggle {
+  z-index: 500;
+}
+
+.darkmode-background {
+  background: var(--background-gradient) !important;
+}
+
+/* Root definitions for font styles */
+:root {
+  --font-title1: 'Inter', sans-serif; /* Title 1 settings */
+  --font-title2: 'Inter', sans-serif; /* Title 2 settings */
+  --font-headline: 'Inter', sans-serif; /* Headline settings */
+  --font-body1: 'Inter', sans-serif; /* Body 1 settings */
+  --font-body2: 'Inter', sans-serif; /* Body 2 settings */
+  --font-caption: 'Inter', sans-serif; /* Caption settings */
+}
+
+.app__fulldescription-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.app__description-text {
+  max-width: 50%;
+}
+
+
+.app__description-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+.app__description-text h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.app__description-text ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.app__description-text ul li {
+  font-size: 1rem;
+  color: white;
+  margin: 0.8rem 0;
+}
+
+.app__download-buttons img {
+  width: 150px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.app__description-image img {
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app__fulldescription-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .app__description-text {
+    max-width: 100%;
+  }
+
+  .app__description-image img {
+    max-width: 80%;
+    margin-top: 2rem;
+  }
+}
+
+.app__section-title {
+  font-size: 2.5rem; /* Same size for all headings */
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  text-align: left; /* Adjust if necessary */
+}
+
+@media (max-width: 768px) {
+  .app__section-title {
+    font-size: var(--font-xl);
+    text-align: center;
+  }
+
+  .app__name {
+    font-size: var(--font-xl);
+    margin: 0;
+    color: var(--text-color);
+  }
+
+
+  .app__description-text p {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: white;
+  }
+
+  .app__description-text h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .app__description-text ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .app__description-text ul li {
+    font-size: 0.75rem;
+    color: white;
+    margin: 0.8rem 0;
+  }
+
+  .app__description-image img {
+    max-width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .app__download-buttons img {
+    width: 100px;
+  }
+}
