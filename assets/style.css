@@ -305,7 +305,7 @@ html[dir=rtl] .app__logo-wrapper {
 
 @media (max-width: 768px) {
   .app__section {
-    margin-bottom: 64px;
+    margin-bottom: 0px;
   }
 }
 
