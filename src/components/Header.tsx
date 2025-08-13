@@ -31,11 +31,13 @@ export const Header = () => {
           </nav>
           
           <div className="flex items-center">
-            <Button 
-              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              Download Now
-            </Button>
+            <a href="https://apps.apple.com/lt/app/sex-game-for-couples-kinky/id6503987806" target="_blank" rel="noopener noreferrer">
+              <Button 
+                className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                Download Now
+              </Button>
+            </a>
           </div>
         </div>
       </div>

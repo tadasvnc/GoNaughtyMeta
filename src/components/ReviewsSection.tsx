@@ -19,12 +19,12 @@ const reviews = [
   {
     username: "Frederick Callaway",
     stars: 5,
-    text: "It is crazy to see what impact Scratch Adventure has on so many couples out there. Me and my partner definitely got to know each other way better and from a complete new side."
+    text: "It is crazy to see what impact GoNaughty has on so many couples out there. Me and my partner definitely got to know each other way better and from a complete new side."
   },
   {
     username: "Herrera_Schmidr",
     stars: 4,
-    text: "We started to use Scratch Adventure in January 2022 and we are still thrilled by all the games this app includes. Due to the amount of challenges it is very hard to get bored at any time."
+    text: "We started to use GoNaughty in January 2022 and we are still thrilled by all the games this app includes. Due to the amount of challenges it is very hard to get bored at any time."
   },
   {
     username: "brazybaby1997",
@@ -44,7 +44,7 @@ const reviews = [
   {
     username: "Reta Alfredia",
     stars: 5,
-    text: "My boyfriend is this kind of guys that always wants to try new stuff. Since we started playing Scratch Adventure this changed completely… now we take a lot of inspiration for new stuff from the app."
+    text: "My boyfriend is this kind of guys that always wants to try new stuff. Since we started playing GoNaughty this changed completely… now we take a lot of inspiration for new stuff from the app."
   },
   {
     username: "urroyalhighness420",

@@ -1,6 +1,6 @@
 import { Heart, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@/assets/hero-image3.jpg";
+import heroImage from "@/assets/hero-image4.jpeg";
 import appStoreButton from "@/assets/app-store-button.png";
 export const HeroSection = () => {
   return <section className="min-h-screen flex items-center pt-20 bg-gradient-to-b from-[#590C6B] via-[#3B0645] to-[#28024D] relative">
@@ -28,7 +28,7 @@ export const HeroSection = () => {
             
             {/* Download Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#" className="inline-block">
+              <a href="https://apps.apple.com/lt/app/sex-game-for-couples-kinky/id6503987806" target="_blank" rel="noopener noreferrer" className="inline-block">
                 <img 
                   src={appStoreButton}
                   alt="Download on the App Store"

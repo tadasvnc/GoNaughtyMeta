@@ -58,10 +58,12 @@ export const DownloadCTA = () => {
 
           {/* Download Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold px-8 py-4 text-lg rounded-full shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 transform hover:scale-105 min-w-[200px]">
-              <Download className="w-5 h-5 mr-2" />
-              Download Free
-            </Button>
+            <a href="https://apps.apple.com/lt/app/sex-game-for-couples-kinky/id6503987806" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold px-8 py-4 text-lg rounded-full shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 transform hover:scale-105 min-w-[200px]">
+                <Download className="w-5 h-5 mr-2" />
+                Download Free
+              </Button>
+            </a>
           </div>
 
           {/* Trust Signals */}
