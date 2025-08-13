@@ -1,0 +1,120 @@
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import s0 from "@/assets/s0.jpg";
+import s1 from "@/assets/s1.jpg";
+import s2 from "@/assets/s2.jpg";
+import s3 from "@/assets/s3.jpg";
+import s4 from "@/assets/s4.jpg";
+import s5 from "@/assets/s5.jpg";
+
+const screenshots = [
+  { image: s0, caption: "Spin the Wheel of Desire" },
+  { image: s1, caption: "Unlock Naughty Challenges" },
+  { image: s2, caption: "Explore Intimate Questions" },
+  { image: s3, caption: "Discover New Positions" },
+  { image: s4, caption: "Roll the Erotic Dice" },
+  { image: s5, caption: "Personalize Your Experience" },
+];
+
+export const AppScreenshots = () => {
+  return (
+    <section id="inside-the-game" className="py-20 bg-gradient-to-b from-[#28024D] via-[#1F0238] to-[#1C0232] relative">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+            Inside the Game
+          </h2>
+        </div>
+        
+        {/* Mobile Carousel */}
+        <div className="block md:hidden max-w-sm mx-auto px-4">
+          <Carousel
+            opts={{
+              align: "center",
+              loop: false,
+              skipSnaps: false,
+              dragFree: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2">
+              {screenshots.map((screenshot, index) => (
+                <CarouselItem key={index} className="pl-2 basis-full">
+                  <div className="flex flex-col items-center space-y-4">
+                    {/* Screenshot Image */}
+                    <div className="relative w-full max-w-[280px]">
+                      <img 
+                        src={screenshot.image} 
+                        alt={screenshot.caption}
+                        className="w-full h-auto rounded-2xl shadow-2xl"
+                      />
+                    </div>
+                    
+                    {/* Caption */}
+                    <p className="text-lg font-semibold text-center">
+                      {screenshot.caption}
+                    </p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+          
+          {/* Swipe Indicator */}
+          <div className="flex justify-center mt-6">
+            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+              </svg>
+              <span>Swipe to explore</span>
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Carousel */}
+        <div className="hidden md:block max-w-6xl mx-auto px-12 md:px-0">
+          <Carousel
+            opts={{
+              align: "center",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnInteraction: false,
+              }),
+            ]}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {screenshots.map((screenshot, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/2 lg:basis-1/3">
+                  <div className="flex flex-col items-center space-y-4">
+                    {/* Screenshot Image */}
+                    <div className="relative w-full max-w-sm">
+                      <img 
+                        src={screenshot.image} 
+                        alt={screenshot.caption}
+                        className="w-full h-auto rounded-2xl shadow-2xl"
+                      />
+                    </div>
+                    
+                    {/* Caption */}
+                    <p className="text-lg font-semibold text-center">
+                      {screenshot.caption}
+                    </p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+      </div>
+    </section>
+  );
+};
