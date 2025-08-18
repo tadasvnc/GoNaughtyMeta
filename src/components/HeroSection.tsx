@@ -43,7 +43,7 @@ export const HeroSection = () => {
                 {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />)}
               </div>
               <span className="text-sm text-muted-foreground">
-                Rated 4.7/5 based on 6000 downloads
+                Rated 4.8/5 based on 6000 downloads
               </span>
             </div>
           </div>
@@ -54,31 +54,31 @@ export const HeroSection = () => {
               <img src={heroImage} alt="Intimate couple" className="w-full h-full object-cover" />
               
               {/* Feature Overlay Cards */}
-              <div className="absolute top-6 right-6 space-y-3">
-                <div className="bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10 shadow-xl hover:bg-white/10 transition-all duration-300">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-                      <Heart className="w-4 h-4 text-white fill-current" />
+              <div className="absolute top-6 right-6 space-y-2 md:space-y-3">
+                <div className="bg-white/5 backdrop-blur-sm p-2 md:p-4 rounded-lg md:rounded-xl border border-white/10 shadow-xl hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center space-x-2 md:space-x-3">
+                    <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+                      <Heart className="w-3 h-3 md:w-4 md:h-4 text-white fill-current" />
                     </div>
-                    <span className="text-sm font-semibold text-white drop-shadow-lg">Sex Positions & Location</span>
+                    <span className="text-xs md:text-sm font-semibold text-white drop-shadow-lg">Sex Positions & Location</span>
                   </div>
                 </div>
                 
-                <div className="bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10 shadow-xl hover:bg-white/10 transition-all duration-300">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
-                      <Heart className="w-4 h-4 text-white fill-current" />
+                <div className="bg-white/5 backdrop-blur-sm p-2 md:p-4 rounded-lg md:rounded-xl border border-white/10 shadow-xl hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center space-x-2 md:space-x-3">
+                    <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
+                      <Heart className="w-3 h-3 md:w-4 md:h-4 text-white fill-current" />
                     </div>
-                    <span className="text-sm font-semibold text-white drop-shadow-lg">Erotic Dares & Challenges</span>
+                    <span className="text-xs md:text-sm font-semibold text-white drop-shadow-lg">Erotic Dares & Challenges</span>
                   </div>
                 </div>
                 
-                <div className="bg-white/5 backdrop-blur-sm p-4 rounded-xl border border-white/10 shadow-xl hover:bg-white/10 transition-all duration-300">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center shadow-lg">
-                      <Heart className="w-4 h-4 text-white fill-current" />
+                <div className="bg-white/5 backdrop-blur-sm p-2 md:p-4 rounded-lg md:rounded-xl border border-white/10 shadow-xl hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center space-x-2 md:space-x-3">
+                    <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center shadow-lg">
+                      <Heart className="w-3 h-3 md:w-4 md:h-4 text-white fill-current" />
                     </div>
-                    <span className="text-sm font-semibold text-white drop-shadow-lg">Intimate Questions</span>
+                    <span className="text-xs md:text-sm font-semibold text-white drop-shadow-lg">Intimate Questions</span>
                   </div>
                 </div>
               </div>

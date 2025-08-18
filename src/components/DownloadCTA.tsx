@@ -25,7 +25,7 @@ export const DownloadCTA = () => {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center justify-center mb-3">
                 <Star className="w-8 h-8 text-yellow-400 fill-yellow-400" />
-                <span className="text-2xl font-bold text-white ml-2">4.6/5</span>
+                <span className="text-2xl font-bold text-white ml-2">4.8/5</span>
               </div>
               <p className="text-white/80">App Store Rating</p>
               <p className="text-sm text-white/60">6000 downloads</p>
@@ -53,7 +53,7 @@ export const DownloadCTA = () => {
           {/* Urgency/Scarcity */}
           <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl p-6 mb-10 border border-pink-500/30">
             <p className="text-white font-semibold mb-2">💝 Limited Time Offer</p>
-            <p className="text-white/90">Download now and get <span className="text-pink-300 font-bold">5 days FREE</span> access to premium content!</p>
+            <p className="text-white/90">Download now and get <span className="text-pink-300 font-bold">7 days FREE</span> access to premium content!</p>
           </div>
 
           {/* Download Buttons */}

@@ -24,7 +24,7 @@ const reviews = [
   {
     username: "Herrera_Schmidr",
     stars: 4,
-    text: "We started to use GoNaughty in January 2022 and we are still thrilled by all the games this app includes. Due to the amount of challenges it is very hard to get bored at any time."
+    text: "We started to use GoNaughty in January 2024 and we are still thrilled by all the games this app includes. Due to the amount of challenges it is very hard to get bored at any time."
   },
   {
     username: "brazybaby1997",
