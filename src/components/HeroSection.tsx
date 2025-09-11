@@ -1,6 +1,6 @@
 import { Heart, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@/assets/hero-image4.jpeg";
+import heroImage from "@/assets/hero8.jpeg";
 import appStoreButton from "@/assets/app-store-button.png";
 export const HeroSection = () => {
   return <section className="min-h-screen flex items-center pt-20 bg-gradient-to-b from-[#590C6B] via-[#3B0645] to-[#28024D] relative">
@@ -22,7 +22,7 @@ export const HeroSection = () => {
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Ignite your intimacy with over 1000+ expert-approved sex-challenges and questions designed for every couple.
+                Spark your connection with 1000+ bold, curious, and wildly fun sex challenges & questions made for every kind of couple.
               </p>
             </div>
             
@@ -55,7 +55,7 @@ export const HeroSection = () => {
               
               {/* Feature Overlay Cards */}
               <div className="absolute top-6 right-6 space-y-2 md:space-y-3">
-                <div className="bg-white/5 backdrop-blur-sm p-2 md:p-4 rounded-lg md:rounded-xl border border-white/10 shadow-xl hover:bg-white/10 transition-all duration-300">
+                <div className="bg-black/30 backdrop-blur-md p-2 md:p-4 rounded-lg md:rounded-xl border border-white/10 shadow-xl hover:bg-black/50 transition-all duration-300">
                   <div className="flex items-center space-x-2 md:space-x-3">
                     <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
                       <Heart className="w-3 h-3 md:w-4 md:h-4 text-white fill-current" />
@@ -64,7 +64,7 @@ export const HeroSection = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white/5 backdrop-blur-sm p-2 md:p-4 rounded-lg md:rounded-xl border border-white/10 shadow-xl hover:bg-white/10 transition-all duration-300">
+                <div className="bg-black/30 backdrop-blur-md p-2 md:p-4 rounded-lg md:rounded-xl border border-white/10 shadow-xl hover:bg-black/50 transition-all duration-300">
                   <div className="flex items-center space-x-2 md:space-x-3">
                     <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
                       <Heart className="w-3 h-3 md:w-4 md:h-4 text-white fill-current" />
@@ -73,7 +73,7 @@ export const HeroSection = () => {
                   </div>
                 </div>
                 
-                <div className="bg-white/5 backdrop-blur-sm p-2 md:p-4 rounded-lg md:rounded-xl border border-white/10 shadow-xl hover:bg-white/10 transition-all duration-300">
+                <div className="bg-black/30 backdrop-blur-md p-2 md:p-4 rounded-lg md:rounded-xl border border-white/10 shadow-xl hover:bg-black/50 transition-all duration-300">
                   <div className="flex items-center space-x-2 md:space-x-3">
                     <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center shadow-lg">
                       <Heart className="w-3 h-3 md:w-4 md:h-4 text-white fill-current" />

@@ -4,34 +4,35 @@ const reviews = [
   {
     username: "Ash23TJ",
     stars: 5,
-    text: "This keeps things fun while we are away and we are always excited to rack up the points when we are together. So much fun and excitement!!!"
+    text: "Makes things fun when we're apart. We love racking up points together!"
   },
   {
-    username: "Hutchins_Dakotas", 
+    username: "Hutchins_Dakotas",
     stars: 5,
-    text: "A few friends of mine downloaded it recently, and told me of its power, so i gave it a try myself. It is a blast of fun and you really get out of your comfort zone to try new stuff, definitely recommendable to couples that really want to spice things up."
+    text: "Friends told me to try it — super fun! Gets you doing stuff you’d never expect."
   },
   {
     username: "LeesaJackelinel",
     stars: 5,
-    text: "Definitely worth the money, cool game. I also never expected so many updates, you do a good job actually"
+    text: "Totally worth it. Didn’t expect all the updates either, nice job!"
   },
   {
     username: "Frederick Callaway",
     stars: 5,
-    text: "It is crazy to see what impact GoNaughty has on so many couples out there. Me and my partner definitely got to know each other way better and from a complete new side."
+    text: "Crazy how much closer we’ve gotten. Learned so much about each other!"
   },
   {
     username: "Herrera_Schmidr",
     stars: 4,
-    text: "We started to use GoNaughty in January 2024 and we are still thrilled by all the games this app includes. Due to the amount of challenges it is very hard to get bored at any time."
+    text: "We’ve been using it since Jan and still loving all the challenges. Never boring!"
   },
   {
     username: "brazybaby1997",
     stars: 5,
-    text: "I absolutely love this game! There's so many different questions and activities and so much different stuff. There's also so many different levels that it's perfect for couples."
-  }
+    text: "Love it! So many fun questions and levels. Perfect for couples."
+  },
 ];
+
 
 // OPTION 1: Masonry/Pinterest Style Grid
 export const ReviewsMasonryGrid = () => {

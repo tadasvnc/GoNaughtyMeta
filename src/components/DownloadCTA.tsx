@@ -16,7 +16,7 @@ export const DownloadCTA = () => {
               Ready to Spice Things Up?
             </h2>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              Join over <span className="text-pink-400 font-bold">2,000,000+ couples</span> who've already transformed their relationship
+              Join over <span className="text-pink-400 font-bold">6,000+ couples</span> who've already transformed their relationship
             </p>
           </div>
 
@@ -34,7 +34,7 @@ export const DownloadCTA = () => {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center justify-center mb-3">
                 <Users className="w-8 h-8 text-pink-400" />
-                <span className="text-2xl font-bold text-white ml-2">100K+</span>
+                <span className="text-2xl font-bold text-white ml-2">6K+</span>
               </div>
               <p className="text-white/80">Happy Couples</p>
               <p className="text-sm text-white/60">Worldwide</p>
@@ -46,7 +46,7 @@ export const DownloadCTA = () => {
                 <span className="text-2xl font-bold text-white ml-2">1500+</span>
               </div>
               <p className="text-white/80">Challenges</p>
-              <p className="text-sm text-white/60">Expert-approved</p>
+              <p className="text-sm text-white/60">Made with Passion</p>
             </div>
           </div>
 
