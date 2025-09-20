@@ -3,17 +3,11 @@ import Autoplay from "embla-carousel-autoplay";
 import s0 from "@/assets/s0.jpg";
 import s1 from "@/assets/s1.jpg";
 import s2 from "@/assets/s2.jpg";
-import s3 from "@/assets/s3.jpg";
-import s4 from "@/assets/s4.jpg";
-import s5 from "@/assets/s5.jpg";
 
 const screenshots = [
-  { image: s0, caption: "Spin the Wheel of Desire" },
-  { image: s1, caption: "Unlock Naughty Challenges" },
-  { image: s2, caption: "Explore Intimate Questions" },
-  { image: s3, caption: "Discover New Positions" },
-  { image: s4, caption: "Roll the Erotic Dice" },
-  { image: s5, caption: "Personalize Your Experience" },
+  { image: s0 },
+  { image: s1 },
+  { image: s2 },
 ];
 
 export const AppScreenshots = () => {
@@ -40,20 +34,15 @@ export const AppScreenshots = () => {
             <CarouselContent className="-ml-2">
               {screenshots.map((screenshot, index) => (
                 <CarouselItem key={index} className="pl-2 basis-full">
-                  <div className="flex flex-col items-center space-y-4">
+                  <div className="flex flex-col items-center">
                     {/* Screenshot Image */}
                     <div className="relative w-full max-w-[280px]">
                       <img 
                         src={screenshot.image} 
-                        alt={screenshot.caption}
+                        alt={`Screenshot ${index + 1}`}
                         className="w-full h-auto rounded-2xl shadow-2xl"
                       />
                     </div>
-                    
-                    {/* Caption */}
-                    <p className="text-lg font-semibold text-center">
-                      {screenshot.caption}
-                    </p>
                   </div>
                 </CarouselItem>
               ))}
@@ -92,20 +81,15 @@ export const AppScreenshots = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {screenshots.map((screenshot, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/2 lg:basis-1/3">
-                  <div className="flex flex-col items-center space-y-4">
+                  <div className="flex flex-col items-center">
                     {/* Screenshot Image */}
                     <div className="relative w-full max-w-sm">
                       <img 
                         src={screenshot.image} 
-                        alt={screenshot.caption}
+                        alt={`Screenshot ${index + 1}`}
                         className="w-full h-auto rounded-2xl shadow-2xl"
                       />
                     </div>
-                    
-                    {/* Caption */}
-                    <p className="text-lg font-semibold text-center">
-                      {screenshot.caption}
-                    </p>
                   </div>
                 </CarouselItem>
               ))}

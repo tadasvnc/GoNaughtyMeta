@@ -13,7 +13,7 @@ export const DownloadCTA = () => {
           {/* Main CTA Content */}
           <div className="mb-12">
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ready to Spice Things Up?
+              Ready to Add Some Fun?
             </h2>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
               Join over <span className="text-pink-400 font-bold">6,000+ couples</span> who've already transformed their relationship
@@ -58,12 +58,13 @@ export const DownloadCTA = () => {
 
           {/* Download Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <a href="https://apps.apple.com/lt/app/sex-game-for-couples-kinky/id6503987806" target="_blank" rel="noopener noreferrer">
-              <Button className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold px-8 py-4 text-lg rounded-full shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 transform hover:scale-105 min-w-[200px]">
-                <Download className="w-5 h-5 mr-2" />
-                Download Free
-              </Button>
-            </a>
+            <Button 
+              onClick={() => window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=0f68efee-b52c-4c94-b961-50a016c3450f', '_blank')}
+              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold px-8 py-4 text-lg rounded-full shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 transform hover:scale-105 min-w-[200px] cursor-pointer"
+            >
+              <Download className="w-5 h-5 mr-2" />
+              Download Free
+            </Button>
           </div>
 
           {/* Trust Signals */}

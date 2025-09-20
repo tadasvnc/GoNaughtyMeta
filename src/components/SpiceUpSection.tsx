@@ -15,7 +15,7 @@ const games = [
   {
     icon: <img src={bananaIcon} alt="Game Icon" className="w-12 h-12" />,
     title: "Long Distance Game",
-    description: "Send affectionate, cute, or even naughty notifications to your partner's device, instantly capturing their attention and creating a playful connection.",
+    description: "Send affectionate, cute, or even playful notifications to your partner's device, instantly capturing their attention and creating a fun connection.",
   },
   {
     icon: <img src={bananaIcon} alt="Game Icon" className="w-12 h-12" />,
