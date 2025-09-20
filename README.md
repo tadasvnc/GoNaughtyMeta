@@ -66,6 +66,8 @@ Simply open [Lovable](https://lovable.dev/projects/d3478d0a-ab06-47fc-aae6-586d0
 
 ## Can I connect a custom domain to my Lovable project?
 
+Hosted in Netlify
+
 Yes, you can!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
