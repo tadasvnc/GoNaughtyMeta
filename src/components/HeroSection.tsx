@@ -1,6 +1,6 @@
 import { Heart, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@/assets/couple.jpg";
+import heroImage from "@/assets/pixels.jpg";
 import appStoreButton from "@/assets/app-store-button.png";
 export const HeroSection = () => {
   return <section className="min-h-screen flex items-center pt-20 bg-gradient-to-b from-[#590C6B] via-[#3B0645] to-[#28024D] relative">
