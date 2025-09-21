@@ -1,6 +1,6 @@
 import { Heart, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import heroImage from "@/assets/hero8.jpeg";
+import heroImage from "@/assets/pixels.jpg";
 import appStoreButton from "@/assets/app-store-button.png";
 export const HeroSection = () => {
   return <section className="min-h-screen flex items-center pt-20 bg-gradient-to-b from-[#590C6B] via-[#3B0645] to-[#28024D] relative">
@@ -9,32 +9,35 @@ export const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <Badge variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-fit">
-              #1 Sex-Game for couples
+              #1 Romantic Game for couples
             </Badge>
             
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                Experience{" "}
+                Rediscover{" "}
                 <span className="bg-hero-gradient bg-clip-text text-transparent">
-                  Sex
+                  Connection
                 </span>{" "}
-                like never before
+                with your partner
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Spark your connection with 1000+ bold, curious, and wildly fun sex challenges & questions made for every kind of couple.
+                Spark your connection with 1000+ bold, curious, and wildly fun romantic challenges & questions made for every kind of couple.
               </p>
             </div>
             
             {/* Download Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://apps.apple.com/lt/app/sex-game-for-couples-kinky/id6503987806" target="_blank" rel="noopener noreferrer" className="inline-block">
+              <button 
+                onClick={() => window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=0f68efee-b52c-4c94-b961-50a016c3450f', '_blank')}
+                className="inline-block cursor-pointer"
+              >
                 <img 
                   src={appStoreButton}
                   alt="Download on the App Store"
-                  className="h-14 md:h-20 w-auto"
+                  className="h-14 md:h-20 w-auto hover:scale-105 transition-transform"
                 />
-              </a>
+              </button>
             </div>
             
             {/* Rating */}
@@ -60,7 +63,7 @@ export const HeroSection = () => {
                     <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
                       <Heart className="w-3 h-3 md:w-4 md:h-4 text-white fill-current" />
                     </div>
-                    <span className="text-xs md:text-sm font-semibold text-white drop-shadow-lg">Sex Positions & Location</span>
+                    <span className="text-xs md:text-sm font-semibold text-white drop-shadow-lg">Fun Surprises</span>
                   </div>
                 </div>
                 
@@ -69,7 +72,7 @@ export const HeroSection = () => {
                     <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
                       <Heart className="w-3 h-3 md:w-4 md:h-4 text-white fill-current" />
                     </div>
-                    <span className="text-xs md:text-sm font-semibold text-white drop-shadow-lg">Erotic Dares & Challenges</span>
+                    <span className="text-xs md:text-sm font-semibold text-white drop-shadow-lg">Romantic Dares & Challenges</span>
                   </div>
                 </div>
                 
@@ -78,7 +81,7 @@ export const HeroSection = () => {
                     <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center shadow-lg">
                       <Heart className="w-3 h-3 md:w-4 md:h-4 text-white fill-current" />
                     </div>
-                    <span className="text-xs md:text-sm font-semibold text-white drop-shadow-lg">Intimate Questions</span>
+                    <span className="text-xs md:text-sm font-semibold text-white drop-shadow-lg">Flirty Questions</span>
                   </div>
                 </div>
               </div>
