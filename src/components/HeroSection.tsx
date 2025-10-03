@@ -29,7 +29,7 @@ export const HeroSection = () => {
             {/* Download Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
-                onClick={() => window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=0f68efee-b52c-4c94-b961-50a016c3450f', '_blank')}
+                onClick={() => window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=cc559d90-ba1d-4a7d-a2cf-f7cd6f175652', '_blank')}
                 className="inline-block cursor-pointer"
               >
                 <img 
