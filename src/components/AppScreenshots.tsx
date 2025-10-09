@@ -1,13 +1,15 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import s0 from "@/assets/s0.jpg";
+import group142 from "@/assets/Group 142.png";
 import s1 from "@/assets/s1.jpg";
 import s2 from "@/assets/s2.jpg";
+import group143 from "@/assets/Group 143.png";
 
 const screenshots = [
-  { image: s0 },
+  { image: group142 },
   { image: s1 },
   { image: s2 },
+  { image: group143 },
 ];
 
 export const AppScreenshots = () => {
