@@ -2,7 +2,27 @@ import { Heart, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import heroImage from "@/assets/pixels.jpg";
 import appStoreButton from "@/assets/app-store-button.png";
+
+// Extend Window interface for TypeScript
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 export const HeroSection = () => {
+  const handleDownloadClick = (location: string) => {
+    // Track event in Google Analytics
+    if (window.gtag) {
+      window.gtag('event', 'download_click', {
+        event_category: 'engagement',
+        event_label: location,
+        value: 1
+      });
+    }
+    // Open App Store link
+    window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=cc559d90-ba1d-4a7d-a2cf-f7cd6f175652', '_blank');
+  };
   return <section className="min-h-screen flex items-center pt-20 bg-gradient-to-b from-[#590C6B] via-[#3B0645] to-[#28024D] relative">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -29,7 +49,7 @@ export const HeroSection = () => {
             {/* Download Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
-                onClick={() => window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=cc559d90-ba1d-4a7d-a2cf-f7cd6f175652', '_blank')}
+                onClick={() => handleDownloadClick('hero_section')}
                 className="inline-block cursor-pointer"
               >
                 <img 

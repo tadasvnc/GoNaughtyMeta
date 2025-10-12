@@ -3,10 +3,30 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import couplesLogo from "@/assets/couples-challenges-logo.png";
 
+// Extend Window interface for TypeScript
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const handleDownloadClick = (location: string) => {
+    // Track event in Google Analytics
+    if (window.gtag) {
+      window.gtag('event', 'download_click', {
+        event_category: 'engagement',
+        event_label: location,
+        value: 1
+      });
+    }
+    // Open App Store link
+    window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=cc559d90-ba1d-4a7d-a2cf-f7cd6f175652', '_blank');
+  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -45,7 +65,7 @@ export const Header = () => {
           {/* Desktop Download Button */}
           <div className="hidden md:flex items-center">
             <Button 
-              onClick={() => window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=cc559d90-ba1d-4a7d-a2cf-f7cd6f175652', '_blank')}
+              onClick={() => handleDownloadClick('header_desktop')}
               className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
             >
               Download Now
@@ -55,7 +75,7 @@ export const Header = () => {
           {/* Mobile Menu Button and Download */}
           <div className="md:hidden flex items-center space-x-4">
             <Button 
-              onClick={() => window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=cc559d90-ba1d-4a7d-a2cf-f7cd6f175652', '_blank')}
+              onClick={() => handleDownloadClick('header_mobile')}
               size="sm"
               className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
             >
