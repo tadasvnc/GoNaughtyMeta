@@ -1,8 +1,13 @@
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
+import { SocialProofBar } from "@/components/SocialProofBar";
+import { FeaturesSection } from "@/components/FeaturesSection";
 import { AppScreenshots } from "@/components/AppScreenshots";
-import { ReviewsMasonryGrid as ReviewsSection } from "@/components/ReviewsAlternative";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { DownloadCTA } from "@/components/DownloadCTA";
+import { FinalCTASection } from "@/components/FinalCTASection";
+import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -11,11 +16,16 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        <SocialProofBar />
         <AppScreenshots />
-        <ReviewsSection />
+        <FeaturesSection />
+        <TestimonialsSection />
+        <HowItWorksSection />
         <DownloadCTA />
+        <FinalCTASection />
       </main>
       <Footer />
+      <MobileStickyCTA />
     </div>
   );
 };

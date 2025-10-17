@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Star, Download, Heart, Users } from "lucide-react";
-import appStoreButton from "@/assets/app-store-button.png";
+// Removed App Store badge image import
 
 // Extend Window interface for TypeScript
 declare global {
@@ -19,8 +19,16 @@ export const DownloadCTA = () => {
         value: 1
       });
     }
-    // Open App Store link
-    window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=cc559d90-ba1d-4a7d-a2cf-f7cd6f175652', '_blank');
+    
+    // Smart device detection
+    const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const android = /Android/.test(navigator.userAgent);
+    
+    if (iOS || android) {
+      window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=cc559d90-ba1d-4a7d-a2cf-f7cd6f175652', '_blank');
+    } else {
+      window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=cc559d90-ba1d-4a7d-a2cf-f7cd6f175652', '_blank');
+    }
   };
   return (
     <section className="py-20 bg-gradient-to-b from-[#1C0232] to-black relative overflow-hidden">
@@ -32,10 +40,11 @@ export const DownloadCTA = () => {
           {/* Main CTA Content */}
           <div className="mb-12">
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ready to Add Some Fun?
+              Spice up tonight with playful couple challenges
             </h2>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              Join over <span className="text-pink-400 font-bold">6,000+ couples</span> who've already transformed their relationship
+              Join <span className="text-pink-400 font-bold">52,000+ couples</span> using quick, fun prompts to feel closer—
+              free download with <span className="text-pink-300 font-semibold">7‑day Premium</span> included.
             </p>
           </div>
 
@@ -46,8 +55,8 @@ export const DownloadCTA = () => {
                 <Star className="w-8 h-8 text-yellow-400 fill-yellow-400" />
                 <span className="text-2xl font-bold text-white ml-2">4.8/5</span>
               </div>
-              <p className="text-white/80">App Store Rating</p>
-              <p className="text-sm text-white/60">6000 downloads</p>
+              <p className="text-white/80">Average App Store rating</p>
+              <p className="text-sm text-white/60">52,000+ downloads</p>
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
@@ -70,19 +79,19 @@ export const DownloadCTA = () => {
           </div>
 
           {/* Urgency/Scarcity */}
-          <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl p-6 mb-10 border border-pink-500/30">
-            <p className="text-white font-semibold mb-2">💝 Limited Time Offer</p>
-            <p className="text-white/90">Download now and get <span className="text-pink-300 font-bold">7 days FREE</span> access to premium content!</p>
+          <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl p-6 mb-10 border border-pink-500/30 transform hover:scale-105 transition-all duration-300">
+            <p className="text-white font-semibold mb-2 text-lg">💝 Special Offer</p>
+            <p className="text-white/90 text-base">Start today and enjoy <span className="text-pink-300 font-bold">7 days FREE</span> Premium access. Cancel anytime, no commitment.</p>
           </div>
 
           {/* Download Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Button 
-              onClick={() => handleDownloadClick('cta_section')}
-              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold px-8 py-4 text-lg rounded-full shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 transform hover:scale-105 min-w-[200px] cursor-pointer"
+              onClick={() => handleDownloadClick('cta_primary_button')}
+              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold px-8 py-4 text-lg rounded-full shadow-2xl hover:shadow-pink-500/25 transition-all duration-300 transform hover:scale-105 min-w-[220px] cursor-pointer"
             >
               <Download className="w-5 h-5 mr-2" />
-              Download Free
+              Start Free Trial
             </Button>
           </div>
 
@@ -107,11 +116,11 @@ export const DownloadCTA = () => {
           </div>
 
           {/* Final Push */}
-          <div className="mt-10 p-6 bg-black/30 rounded-2xl border border-white/10">
-            <p className="text-white/90 italic text-lg">
-              "Don't let another boring night pass by. Your relationship deserves the spark it once had."
+          <div className="mt-10 p-8 bg-black/30 rounded-2xl border border-white/10 transform hover:scale-102 transition-all duration-300">
+            <p className="text-white/90 text-lg md:text-xl leading-relaxed">
+              Transform your relationship tonight. Open the app and start connecting in minutes.
             </p>
-            <p className="text-pink-300 font-semibold mt-2">- Start your adventure today -</p>
+            <p className="text-pink-300 font-bold text-lg mt-3">Try it free for 7 days</p>
           </div>
         </div>
       </div>

@@ -4,33 +4,33 @@ import bananaIcon from "@/assets/banana.svg";
 const games = [
   {
     icon: <img src={bananaIcon} alt="Game Icon" className="w-12 h-12" />,
-    title: "Scratch off Bedroom Game",
-    description: "Recreate sex positions, complete indoor and outdoor locations, try d*rty extras and get rewarded for each completed challenge.",
+    title: "Adventure Challenge Game",
+    description: "Complete fun challenges in various locations, try exciting activities and get rewarded for each completed task together.",
   },
   {
     icon: <img src={bananaIcon} alt="Game Icon" className="w-12 h-12" />,
-    title: "Dice to Spice Game",
-    description: "Each player takes turns spinning the wheels, one determining an action and the other specifying a body part.",
+    title: "Playful Discovery Game",
+    description: "Take turns with interactive activities that encourage playful connection and bring you closer together.",
   },
   {
     icon: <img src={bananaIcon} alt="Game Icon" className="w-12 h-12" />,
     title: "Long Distance Game",
-    description: "Send affectionate, cute, or even playful notifications to your partner's device, instantly capturing their attention and creating a fun connection.",
+    description: "Send affectionate, cute, or playful notifications to your partner's device, instantly capturing their attention and creating a fun connection.",
   },
   {
     icon: <img src={bananaIcon} alt="Game Icon" className="w-12 h-12" />,
-    title: "Squeeze | Lick | Suck Game",
-    description: "The randomly specified body part becomes the focal point for the chosen action and must be performed by the player on his partner.",
+    title: "Interactive Connection Game",
+    description: "Engage with fun, spontaneous activities designed to strengthen your bond and create memorable moments together.",
   },
   {
     icon: <img src={bananaIcon} alt="Game Icon" className="w-12 h-12" />,
     title: "Date Night Questions",
-    description: "Encourage for open & honest communication with questions that serve as a catalyst for deepening understanding and discovering hidden sexual fantasies.",
+    description: "Encourage open & honest communication with questions that deepen understanding and help you discover new things about each other.",
   },
   {
     icon: <img src={bananaIcon} alt="Game Icon" className="w-12 h-12" />,
     title: "Augmented Reality Game",
-    description: "Overlay private videos onto specific pictures of your choosing, effectively blending reality with your personal world.",
+    description: "Create personalized experiences with interactive AR features that blend your real world with fun digital elements.",
   },
 ];
 
@@ -40,8 +40,11 @@ export const SpiceUpSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Get ready to spice things up
+            Fun Ways to Connect & Play Together
           </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Explore activities designed to strengthen your bond and create lasting memories
+          </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {games.map((game, index) => {
