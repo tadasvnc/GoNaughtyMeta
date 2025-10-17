@@ -56,7 +56,7 @@ export const MobileStickyCTA = () => {
           Download Free
         </Button>
         <p className="text-center text-xs text-gray-600 dark:text-gray-400 mt-2">
-          7-day free trial • Available on iPhone & iPad
+          5-day free trial • Available on iPhone & iPad
         </p>
       </div>
     </div>

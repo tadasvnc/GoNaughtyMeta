@@ -44,7 +44,7 @@ export const DownloadCTA = () => {
             </h2>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
               Join <span className="text-pink-400 font-bold">52,000+ couples</span> using quick, fun prompts to feel closer—
-              free download with <span className="text-pink-300 font-semibold">7‑day Premium</span> included.
+              free download with <span className="text-pink-300 font-semibold">5‑day Premium</span> included.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ export const DownloadCTA = () => {
           {/* Urgency/Scarcity */}
           <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl p-6 mb-10 border border-pink-500/30 transform hover:scale-105 transition-all duration-300">
             <p className="text-white font-semibold mb-2 text-lg">💝 Special Offer</p>
-            <p className="text-white/90 text-base">Start today and enjoy <span className="text-pink-300 font-bold">7 days FREE</span> Premium access. Cancel anytime, no commitment.</p>
+            <p className="text-white/90 text-base">Start today and enjoy <span className="text-pink-300 font-bold">5 days FREE</span> Premium access. Cancel anytime, no commitment.</p>
           </div>
 
           {/* Download Buttons */}
@@ -120,7 +120,7 @@ export const DownloadCTA = () => {
             <p className="text-white/90 text-lg md:text-xl leading-relaxed">
               Transform your relationship tonight. Open the app and start connecting in minutes.
             </p>
-            <p className="text-pink-300 font-bold text-lg mt-3">Try it free for 7 days</p>
+            <p className="text-pink-300 font-bold text-lg mt-3">Try it free for 5 days</p>
           </div>
         </div>
       </div>
