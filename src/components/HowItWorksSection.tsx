@@ -1,4 +1,4 @@
-import { Download, Heart } from "lucide-react";
+import { Download, Heart, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Extend Window interface for TypeScript
@@ -17,7 +17,7 @@ const steps = [
   },
   {
     number: 2,
-    icon: Heart,
+    icon: Users,
     title: "Get Cozy Together",
     description: "Turn on the game with your partner"
   },
