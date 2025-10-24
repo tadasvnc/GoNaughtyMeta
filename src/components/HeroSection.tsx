@@ -1,7 +1,19 @@
 import { Star } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import appStoreButton from "@/assets/app-store-button.png";
 import heroImage from "@/assets/pixels.jpg";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import group142 from "@/assets/new1.jpg";
+import group143 from "@/assets/new2.png";
+import group144 from "@/assets/Group 144.png";
+import group147 from "@/assets/Group 147.png";
+
+const screenshots = [
+  { image: group142 },
+  { image: group143 },
+  { image: group147 },
+  { image: group144 },
+];
 
 // Extend Window interface for TypeScript
 declare global {
@@ -31,7 +43,9 @@ export const HeroSection = () => {
       window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=cc559d90-ba1d-4a7d-a2cf-f7cd6f175652', '_blank');
     }
   };
-  return <section className="min-h-screen flex items-center pt-20 relative overflow-hidden">
+  return <>
+    {/* Hero Content Section */}
+    <section className="min-h-[70vh] flex items-center pt-20 pb-8 relative overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -40,55 +54,120 @@ export const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#590C6B]/90 via-[#3B0645]/85 to-[#28024D]/90"></div>
       </div>
       
+      {/* Decorative Elements for Depth */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-pink-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '700ms' }}></div>
+      </div>
+      
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          {/* Badge */}
-          <Badge variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-base px-4 py-2">
-            #1 Connection App for Couples
-          </Badge>
-          
+        <div className="max-w-6xl mx-auto text-center space-y-6">
           {/* Headline */}
-          <div className="space-y-6">
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-white">
-              Bring the Spark Back to Your{" "}
+          <div className="space-y-4">
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-white drop-shadow-2xl">
+              The Ultimate{" "}
               <span className="bg-hero-gradient bg-clip-text text-transparent">
-                Relationship
+                Card Game
               </span>
+              {" "}for Couples
             </h1>
             
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl mx-auto">
-              Join 52,000+ couples using CoupleChallenges to deepen connection and create unforgettable moments together
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
+              Play through 1,500 playful challenges and 1,000 romantic questions that spark laughter and connection every night.
             </p>
           </div>
           
           {/* Download Button - App Store Badge */}
-          <div className="flex flex-col gap-4 items-center">
+          <div className="flex flex-col gap-3 items-center">
             <button 
               onClick={() => handleDownloadClick('hero_app_store_badge')}
-              className="inline-block cursor-pointer transform hover:scale-105 transition-transform"
+              className="inline-block cursor-pointer transform hover:scale-105 transition-all duration-300 hover:drop-shadow-2xl"
             >
               <img 
                 src={appStoreButton}
                 alt="Download on the App Store"
-                className="h-16 md:h-20 w-auto"
+                className="h-16 md:h-20 w-auto drop-shadow-xl"
               />
             </button>
             
-            <p className="text-sm md:text-base text-white/80">
+            <p className="text-sm text-white/80 drop-shadow-md">
               Available on iPhone & iPad
             </p>
           </div>
           
           {/* Rating */}
-          <div className="flex items-center justify-center space-x-2">
+          <div className="flex items-center justify-center space-x-2 bg-white/5 backdrop-blur-sm rounded-full px-6 py-2.5 inline-flex mx-auto border border-white/10">
             <div className="flex space-x-1">
-              {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />)}
+              {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-4 h-4 text-yellow-400 fill-current drop-shadow-lg" />)}
             </div>
-            <span className="text-sm md:text-base text-white/90">
+            <span className="text-sm text-white/90">
               Rated 4.8/5 based on 52,000+ downloads
             </span>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+
+    {/* Screenshots Section - Below Hero */}
+    <section className="py-12 bg-gradient-to-b from-[#28024D] via-[#1F0238] to-[#1C0232] relative">
+      <div className="container mx-auto px-6">
+        {/* Section Title */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white drop-shadow-xl">
+            Inside the Game
+          </h2>
+        </div>
+
+        <div className="max-w-5xl mx-auto">
+          {/* Desktop Carousel */}
+          <div className="hidden md:block">
+            <Carousel
+              opts={{
+                align: "center",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                  stopOnInteraction: false,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {screenshots.map((screenshot, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/2 lg:basis-1/3">
+                    <div className="flex flex-col items-center">
+                      <div className="relative w-full max-w-sm">
+                        <img 
+                          src={screenshot.image} 
+                          alt={`Screenshot ${index + 1}`}
+                          className="w-full h-auto rounded-2xl shadow-2xl ring-2 ring-white/10"
+                        />
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden lg:flex" />
+              <CarouselNext className="hidden lg:flex" />
+            </Carousel>
+          </div>
+
+          {/* Mobile - Vertical List */}
+          <div className="block md:hidden max-w-sm mx-auto space-y-6">
+            {screenshots.map((screenshot, index) => (
+              <div key={index} className="flex justify-center">
+                <img 
+                  src={screenshot.image} 
+                  alt={`Screenshot ${index + 1}`}
+                  className="w-full max-w-[320px] h-auto rounded-2xl shadow-2xl ring-2 ring-white/10"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  </>;
 };

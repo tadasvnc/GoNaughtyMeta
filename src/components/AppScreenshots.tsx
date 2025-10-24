@@ -1,7 +1,7 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import group142 from "@/assets/Group 142.png";
-import group143 from "@/assets/Group 143.jpg";
+import group142 from "@/assets/new1.jpg";
+import group143 from "@/assets/new2.png";
 import group144 from "@/assets/Group 144.png";
 import group147 from "@/assets/Group 147.png";
 
@@ -14,14 +14,8 @@ const screenshots = [
 
 export const AppScreenshots = () => {
   return (
-    <section id="inside-the-game" className="py-20 bg-gradient-to-b from-[#28024D] via-[#1F0238] to-[#1C0232] relative">
+    <section id="inside-the-game" className="hidden">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            Inside the Game
-          </h2>
-        </div>
-        
         {/* Mobile Carousel */}
         <div className="block md:hidden max-w-sm mx-auto px-4">
           <Carousel

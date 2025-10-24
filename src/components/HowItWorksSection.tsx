@@ -60,7 +60,8 @@ export const HowItWorksSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            Get Started in 3 Simple Steps
+            <span className="md:hidden">How It Works</span>
+            <span className="hidden md:inline">Get Started in 3 Simple Steps</span>
           </h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Start your journey to a deeper connection in just minutes
