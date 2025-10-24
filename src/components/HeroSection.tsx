@@ -3,7 +3,7 @@ import appStoreButton from "@/assets/app-store-button.png";
 import heroImage from "@/assets/pixels.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import group142 from "@/assets/new1.jpg";
+import group142 from "@/assets/new4.jpg";
 import group143 from "@/assets/new2.png";
 import group144 from "@/assets/Group 144.png";
 import group147 from "@/assets/Group 147.png";
@@ -67,18 +67,18 @@ export const HeroSection = () => {
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-white drop-shadow-2xl">
               The Ultimate{" "}
               <span className="bg-hero-gradient bg-clip-text text-transparent">
-                Card Game
+                Cards Game
               </span>
               {" "}for Couples
             </h1>
             
             <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
-              Play through 1,500 playful challenges and 1,000 romantic questions that spark laughter and connection every night.
+              Enjoy <span className="font-bold">1,500 fun challenges</span> and <span className="font-bold">1,000 romantic questions</span> together.
             </p>
           </div>
           
           {/* Download Button - App Store Badge */}
-          <div className="flex flex-col gap-3 items-center">
+          <div className="flex items-center justify-center">
             <button 
               onClick={() => handleDownloadClick('hero_app_store_badge')}
               className="inline-block cursor-pointer transform hover:scale-105 transition-all duration-300 hover:drop-shadow-2xl"
@@ -89,18 +89,14 @@ export const HeroSection = () => {
                 className="h-16 md:h-20 w-auto drop-shadow-xl"
               />
             </button>
-            
-            <p className="text-sm text-white/80 drop-shadow-md">
-              Available on iPhone & iPad
-            </p>
           </div>
           
           {/* Rating */}
-          <div className="flex items-center justify-center space-x-2 bg-white/5 backdrop-blur-sm rounded-full px-6 py-2.5 inline-flex mx-auto border border-white/10">
+          <div className="flex items-center justify-center space-x-2">
             <div className="flex space-x-1">
-              {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-4 h-4 text-yellow-400 fill-current drop-shadow-lg" />)}
+              {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-3 h-3 md:w-4 md:h-4 text-yellow-400 fill-current drop-shadow-lg" />)}
             </div>
-            <span className="text-sm text-white/90">
+            <span className="text-xs md:text-sm text-white/90">
               Rated 4.8/5 based on 52,000+ downloads
             </span>
           </div>
