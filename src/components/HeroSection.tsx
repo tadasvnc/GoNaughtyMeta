@@ -49,13 +49,13 @@ export const HeroSection = () => {
   };
   return <>
     {/* Hero Content Section */}
-    <section className="min-h-[70vh] flex items-center pt-20 pb-0 relative overflow-hidden">
+    <section className="min-h-[60vh] flex items-center pt-24 pb-8 relative overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#590C6B]/90 via-[#3B0645]/85 to-[#28024D]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#590C6B]/95 via-[#3B0645]/90 to-[#28024D]"></div>
       </div>
       
       {/* Decorative Elements for Depth */}
@@ -65,60 +65,74 @@ export const HeroSection = () => {
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-6xl mx-auto text-center space-y-6">
+        <div className="max-w-6xl mx-auto text-center space-y-8">
+          {/* Trust Badge */}
+          <div className="flex items-center justify-center space-x-2 animate-fade-in">
+            <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+              <span className="text-white/90 text-sm font-medium">⭐ #1 Couples Game App</span>
+            </div>
+          </div>
+          
           {/* Headline */}
           <div className="space-y-4">
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-white drop-shadow-2xl">
-              The Ultimate{" "}
-              <span className="bg-hero-gradient bg-clip-text text-transparent">
-                Cards Game
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-white drop-shadow-2xl">
+              Transform Your{" "}
+              <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
+                Date Nights
               </span>
-              {" "}for Couples
             </h1>
             
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
-              Enjoy <span className="font-bold">1,500 fun challenges</span> and <span className="font-bold">1,000 romantic questions</span> together.
+            <p className="text-xl md:text-2xl text-white/95 leading-relaxed max-w-3xl mx-auto drop-shadow-lg font-medium">
+              The ultimate couples game with <span className="text-pink-300 font-bold">1,500+ spicy challenges</span> and <span className="text-purple-300 font-bold">1,000+ intimate questions</span>
             </p>
           </div>
           
           {/* Download Button - App Store Badge */}
-          <div className="flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center space-y-4">
             <button 
               onClick={() => handleDownloadClick('hero_app_store_badge')}
-              className="inline-block cursor-pointer transform hover:scale-105 transition-all duration-300 hover:drop-shadow-2xl"
+              className="inline-block cursor-pointer transform hover:scale-110 transition-all duration-300 hover:drop-shadow-2xl animate-bounce-subtle"
             >
               <img 
                 src={appStoreButton}
                 alt="Download on the App Store"
-                className="h-16 md:h-20 w-auto drop-shadow-xl"
+                className="h-20 md:h-24 w-auto drop-shadow-2xl"
               />
             </button>
-          </div>
           
-          {/* Rating */}
-          <div className="flex items-center justify-center space-x-2">
+            {/* Social Proof */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+              <div className="flex items-center space-x-2">
             <div className="flex space-x-1">
-              {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-3 h-3 md:w-4 md:h-4 text-yellow-400 fill-current drop-shadow-lg" />)}
+                  {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-current drop-shadow-lg" />)}
+                </div>
+                <span className="text-sm md:text-base text-white/90 font-semibold">
+                  4.8/5
+                </span>
+              </div>
+              <div className="text-sm md:text-base text-white/80">
+                <span className="font-bold text-white">52,000+</span> happy couples
+              </div>
             </div>
-            <span className="text-xs md:text-sm text-white/90">
-              Rated 4.8/5 based on 52,000+ downloads
-            </span>
           </div>
         </div>
       </div>
     </section>
 
     {/* Screenshots Section - Below Hero */}
-    <section className="pt-12 pb-16 bg-gradient-to-b from-[#28024D] via-[#1F0238] to-[#1C0232] relative">
+    <section className="py-20 bg-gradient-to-b from-[#28024D] via-[#1F0238] to-[#1C0232] relative">
       <div className="container mx-auto px-6">
         {/* Section Title */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white drop-shadow-xl">
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white drop-shadow-xl">
             Inside the Game
           </h2>
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">
+            Explore hot moments, funny challenges, and intimate conversations
+          </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Desktop Carousel */}
           <div className="hidden md:block">
             <Carousel
@@ -134,38 +148,86 @@ export const HeroSection = () => {
               ]}
               className="w-full"
             >
-              <CarouselContent className="-ml-2 md:-ml-4">
+              <CarouselContent className="-ml-4 md:-ml-6">
                 {screenshots.map((screenshot, index) => (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/2 lg:basis-1/3">
-                    <div className="flex flex-col items-center">
-                      <div className="relative w-full max-w-sm">
+                  <CarouselItem key={index} className="pl-4 md:pl-6 basis-1/2 md:basis-1/2 lg:basis-1/3">
+                    <div className="flex flex-col items-center group">
+                      <div className="relative w-full max-w-md transition-all duration-300 group-hover:scale-105">
+                        {/* Glow effect */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <img 
                           src={screenshot.image} 
                           alt={`Screenshot ${index + 1}`}
-                          className="w-full h-auto rounded-2xl shadow-2xl ring-2 ring-white/10"
+                          className="relative w-full h-auto rounded-2xl shadow-2xl ring-2 ring-white/20 group-hover:ring-pink-500/50 transition-all duration-300"
                         />
                       </div>
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="hidden lg:flex" />
-              <CarouselNext className="hidden lg:flex" />
+              <CarouselPrevious className="hidden lg:flex -left-12 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20" />
+              <CarouselNext className="hidden lg:flex -right-12 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20" />
             </Carousel>
           </div>
 
-          {/* Mobile - Vertical List */}
-          <div className="block md:hidden max-w-sm mx-auto space-y-6">
-            {screenshots.map((screenshot, index) => (
-              <div key={index} className="flex justify-center">
-                <img 
-                  src={screenshot.image} 
-                  alt={`Screenshot ${index + 1}`}
-                  className="w-full max-w-[320px] h-auto rounded-2xl shadow-2xl ring-2 ring-white/10"
-                />
+          {/* Mobile - Horizontal Scroll */}
+          <div className="block md:hidden">
+            <Carousel
+              opts={{
+                align: "center",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                  stopOnInteraction: false,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {screenshots.map((screenshot, index) => (
+                  <CarouselItem key={index} className="pl-4 basis-[85%]">
+                    <div className="flex justify-center">
+                      <img 
+                        src={screenshot.image} 
+                        alt={`Screenshot ${index + 1}`}
+                        className="w-full max-w-[320px] h-auto rounded-2xl shadow-2xl ring-2 ring-white/20"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+            {/* Swipe Indicator */}
+            <div className="flex justify-center mt-8">
+              <div className="flex items-center space-x-2 text-sm text-white/60">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+                </svg>
+                <span>Swipe to explore</span>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </div>
-            ))}
+            </div>
           </div>
+        </div>
+
+        {/* CTA Below Screenshots */}
+        <div className="text-center mt-16">
+          <button 
+            onClick={() => handleDownloadClick('screenshots_cta')}
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-pink-600 to-purple-600 rounded-full hover:from-pink-500 hover:to-purple-500 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-pink-500/50"
+          >
+            Download Now - It's Free
+            <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+          <p className="text-white/60 text-sm mt-4">
+            Join 52,000+ couples already playing
+          </p>
         </div>
       </div>
     </section>
