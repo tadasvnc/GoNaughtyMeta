@@ -8,12 +8,12 @@ import screenshot5 from "@/assets/5.png";
 import screenshot6 from "@/assets/6.png";
 
 const screenshots = [
-  { image: screenshot1 },
   { image: screenshot2 },
   { image: screenshot3 },
   { image: screenshot4 },
   { image: screenshot5 },
   { image: screenshot6 },
+  { image: screenshot1 },
 ];
 
 export const AppScreenshots = () => {
