@@ -31,50 +31,62 @@ export const DownloadCTA = () => {
     }
   };
   return (
-    <section className="py-20 bg-gradient-to-b from-[#1C0232] to-black relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-transparent to-purple-500/10"></div>
+    <section className="py-20 bg-gradient-to-b from-[#1C0232] via-[#28024D] to-[#1F0238] relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-10 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+      </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main CTA Content */}
-          <div className="mb-12">
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Spice up tonight with playful couple challenges
+          <div className="mb-12 space-y-6">
+            <h2 className="text-4xl md:text-6xl font-bold text-white drop-shadow-xl leading-tight">
+              Spice Up Tonight with <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Playful Challenges</span>
             </h2>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              Join <span className="text-pink-400 font-bold">52,000+ couples</span> using quick, fun prompts to feel closer—
-              free download with <span className="text-pink-300 font-semibold">5‑day Premium</span> included.
+            <p className="text-xl md:text-2xl text-white/80 leading-relaxed">
+              Join <span className="text-pink-300 font-bold">52,000+ couples</span> using quick, fun prompts to feel closer—
+              free download with <span className="text-pink-300 font-bold">5-day Premium</span> included.
             </p>
           </div>
 
           {/* Social Proof */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <div className="flex items-center justify-center mb-3">
-                <Star className="w-8 h-8 text-yellow-400 fill-yellow-400" />
-                <span className="text-2xl font-bold text-white ml-2">4.8/5</span>
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl hover:shadow-pink-500/20 transform hover:-translate-y-1 transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+              <div className="relative">
+                <div className="flex items-center justify-center mb-3">
+                  <Star className="w-8 h-8 text-yellow-400 fill-yellow-400 drop-shadow-lg" />
+                  <span className="text-2xl font-bold text-white ml-2">4.8/5</span>
+                </div>
+                <p className="text-white/80 font-medium">Average App Store rating</p>
+                <p className="text-sm text-white/60">52,000+ downloads</p>
               </div>
-              <p className="text-white/80">Average App Store rating</p>
-              <p className="text-sm text-white/60">52,000+ downloads</p>
             </div>
             
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <div className="flex items-center justify-center mb-3">
-                <Users className="w-8 h-8 text-pink-400" />
-                <span className="text-2xl font-bold text-white ml-2">6K+</span>
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl hover:shadow-pink-500/20 transform hover:-translate-y-1 transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+              <div className="relative">
+                <div className="flex items-center justify-center mb-3">
+                  <Users className="w-8 h-8 text-pink-400 drop-shadow-lg" />
+                  <span className="text-2xl font-bold text-white ml-2">6K+</span>
+                </div>
+                <p className="text-white/80 font-medium">Happy Couples</p>
+                <p className="text-sm text-white/60">Worldwide</p>
               </div>
-              <p className="text-white/80">Happy Couples</p>
-              <p className="text-sm text-white/60">Worldwide</p>
             </div>
             
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <div className="flex items-center justify-center mb-3">
-                <Heart className="w-8 h-8 text-red-400 fill-red-400" />
-                <span className="text-2xl font-bold text-white ml-2">1500+</span>
+            <div className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-2xl hover:shadow-pink-500/20 transform hover:-translate-y-1 transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+              <div className="relative">
+                <div className="flex items-center justify-center mb-3">
+                  <Heart className="w-8 h-8 text-red-400 fill-red-400 drop-shadow-lg" />
+                  <span className="text-2xl font-bold text-white ml-2">1500+</span>
+                </div>
+                <p className="text-white/80 font-medium">Challenges</p>
+                <p className="text-sm text-white/60">Made with Passion</p>
               </div>
-              <p className="text-white/80">Challenges</p>
-              <p className="text-sm text-white/60">Made with Passion</p>
             </div>
           </div>
 

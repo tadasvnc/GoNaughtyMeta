@@ -23,44 +23,51 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-[#1C0232] via-[#0F0119] to-black">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+    <section className="py-20 bg-gradient-to-b from-[#1F0238] via-[#28024D] to-[#1C0232] relative">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/3 right-20 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-20 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white drop-shadow-xl">
             What Couples Are Saying
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">
             Join 52,000+ couples who've transformed their relationship
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 shadow-xl transform hover:scale-105 transition-all duration-300">
-              <div className="mb-4">
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className={`w-5 h-5 ${
-                        i < testimonial.stars
-                          ? "text-yellow-400 fill-yellow-400"
-                          : "text-gray-400"
-                      }`}
-                    />
-                  ))}
+            <div key={index} className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-2xl hover:shadow-pink-500/20 transform hover:-translate-y-2 transition-all duration-300">
+              {/* Hover glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"></div>
+              
+              <div className="relative">
+                <div className="mb-4">
+                  <div className="flex gap-1 mb-4">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-5 h-5 text-yellow-400 fill-yellow-400 drop-shadow-lg"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-white/80 text-base leading-relaxed mb-6 group-hover:text-white/90 transition-colors duration-300">
+                    "{testimonial.text}"
+                  </p>
                 </div>
-                <p className="text-white/90 text-base leading-relaxed italic mb-6">
-                  "{testimonial.text}"
-                </p>
-              </div>
-              <div className="border-t border-white/20 pt-4">
-                <p className="font-bold text-white">
-                  {testimonial.author}
-                </p>
-                <p className="text-sm text-white/60">
-                  {testimonial.relationship}
-                </p>
+                <div className="border-t border-white/20 pt-4">
+                  <p className="font-bold text-white group-hover:text-pink-300 transition-colors duration-300">
+                    {testimonial.author}
+                  </p>
+                  <p className="text-sm text-white/60">
+                    {testimonial.relationship}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

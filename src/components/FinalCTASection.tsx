@@ -32,45 +32,48 @@ export const FinalCTASection = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 relative overflow-hidden" data-download-section>
+    <section className="py-24 bg-gradient-to-br from-pink-600 via-purple-600 to-pink-600 relative overflow-hidden" data-download-section>
       {/* Decorative background elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20"></div>
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/30"></div>
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+      </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
             Ready to Reconnect With Your Partner?
           </h2>
-          <p className="text-xl md:text-2xl text-white/95 mb-12 leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/95 mb-12 leading-relaxed drop-shadow-lg">
             Download free and start your journey together tonight
           </p>
           
-          <div className="flex flex-col gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col gap-4 justify-center items-center mb-10">
             <button 
               onClick={() => handleDownloadClick('final_cta_app_store')}
-              className="inline-block cursor-pointer transform hover:scale-105 transition-transform"
+              className="inline-block cursor-pointer transform hover:scale-110 transition-all duration-300 hover:drop-shadow-2xl"
             >
               <img 
                 src={appStoreButton}
                 alt="Download on the App Store"
-                className="h-20 md:h-24 w-auto"
+                className="h-20 md:h-24 w-auto drop-shadow-2xl"
               />
             </button>
           </div>
           
-          <div className="flex flex-wrap justify-center items-center gap-6 text-white/90 text-sm md:text-base mb-8">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-wrap justify-center items-center gap-6 text-white text-sm md:text-base mb-8">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
               <Check className="w-5 h-5" />
-              <span>Free to download</span>
+              <span className="font-medium">Free to download</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
               <Check className="w-5 h-5" />
-              <span>Available on iPhone & iPad</span>
+              <span className="font-medium">iPhone & iPad</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
               <Check className="w-5 h-5" />
-              <span>52,000+ happy couples</span>
+              <span className="font-medium">52,000+ couples</span>
             </div>
           </div>
         </div>
