@@ -1,15 +1,19 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import group142 from "@/assets/new1.jpg";
-import group143 from "@/assets/new2.png";
-import group144 from "@/assets/Group 144.png";
-import group147 from "@/assets/Group 147.png";
+import screenshot1 from "@/assets/1.png";
+import screenshot2 from "@/assets/2.png";
+import screenshot3 from "@/assets/3.png";
+import screenshot4 from "@/assets/4.png";
+import screenshot5 from "@/assets/5.png";
+import screenshot6 from "@/assets/6.png";
 
 const screenshots = [
-  { image: group142 },
-  { image: group143 },
-  { image: group147 }, // Complete Funny Challenges - moved to 3rd
-  { image: group144 },
+  { image: screenshot1 },
+  { image: screenshot2 },
+  { image: screenshot3 },
+  { image: screenshot4 },
+  { image: screenshot5 },
+  { image: screenshot6 },
 ];
 
 export const AppScreenshots = () => {

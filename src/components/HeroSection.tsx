@@ -1,18 +1,22 @@
 import { Star } from "lucide-react";
 import appStoreButton from "@/assets/app-store-button.png";
-import heroImage from "@/assets/pixels.jpg";
+import heroImage from "@/assets/ChatGPT Image Jan 6, 2026, 12_40_54 PM.png";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import group142 from "@/assets/new4.jpg";
-import group143 from "@/assets/new2.png";
-import group144 from "@/assets/Group 144.png";
-import group147 from "@/assets/Group 147.png";
+import screenshot1 from "@/assets/1.png";
+import screenshot2 from "@/assets/2.png";
+import screenshot3 from "@/assets/3.png";
+import screenshot4 from "@/assets/4.png";
+import screenshot5 from "@/assets/5.png";
+import screenshot6 from "@/assets/6.png";
 
 const screenshots = [
-  { image: group142 },
-  { image: group143 },
-  { image: group147 },
-  { image: group144 },
+  { image: screenshot1 },
+  { image: screenshot2 },
+  { image: screenshot3 },
+  { image: screenshot4 },
+  { image: screenshot5 },
+  { image: screenshot6 },
 ];
 
 // Extend Window interface for TypeScript
@@ -45,13 +49,13 @@ export const HeroSection = () => {
   };
   return <>
     {/* Hero Content Section */}
-    <section className="min-h-[70vh] flex items-center pt-20 pb-8 relative overflow-hidden">
+    <section className="min-h-[70vh] flex items-center pt-20 pb-0 relative overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#590C6B]/90 via-[#3B0645]/85 to-[#28024D]/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#590C6B]/90 via-[#3B0645]/85 to-[#28024D]"></div>
       </div>
       
       {/* Decorative Elements for Depth */}
@@ -105,7 +109,7 @@ export const HeroSection = () => {
     </section>
 
     {/* Screenshots Section - Below Hero */}
-    <section className="py-12 bg-gradient-to-b from-[#28024D] via-[#1F0238] to-[#1C0232] relative">
+    <section className="pt-12 pb-16 bg-gradient-to-b from-[#28024D] via-[#1F0238] to-[#1C0232] relative">
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <div className="text-center mb-10">
