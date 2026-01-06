@@ -132,9 +132,9 @@ export const HeroSection = () => {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto overflow-visible">
           {/* Desktop Carousel */}
-          <div className="hidden md:block">
+          <div className="hidden md:block overflow-visible">
             <Carousel
               opts={{
                 align: "center",
@@ -146,13 +146,13 @@ export const HeroSection = () => {
                   stopOnInteraction: false,
                 }),
               ]}
-              className="w-full"
+              className="w-full overflow-visible"
             >
-              <CarouselContent className="-ml-4 md:-ml-6">
+              <CarouselContent className="-ml-4 md:-ml-6 overflow-visible">
                 {screenshots.map((screenshot, index) => (
-                  <CarouselItem key={index} className="pl-4 md:pl-6 basis-1/2 md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem key={index} className="pl-4 md:pl-6 basis-1/2 md:basis-1/2 lg:basis-1/3 overflow-visible">
                     <div className="flex flex-col items-center group">
-                      <div className="relative w-full max-w-md transition-all duration-300 group-hover:scale-105">
+                      <div className="relative w-full max-w-md transition-all duration-300 group-hover:scale-110 group-hover:z-50">
                         {/* Glow effect */}
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <img 
