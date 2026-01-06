@@ -23,7 +23,7 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-[#1F0238] via-[#28024D] to-[#1C0232] relative">
+    <section className="py-20 relative overflow-hidden" style={{ background: 'radial-gradient(120% 80% at 50% 30%, #2a0a4a 0%, #1a062e 50%, #12031f 100%)' }}>
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/3 right-20 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>

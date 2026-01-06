@@ -55,7 +55,7 @@ export const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#590C6B]/95 via-[#3B0645]/90 to-[#28024D]"></div>
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(120% 80% at 50% 0%, rgba(42, 10, 74, 0.95) 0%, rgba(26, 6, 46, 0.92) 40%, rgba(18, 3, 31, 0.9) 100%)' }}></div>
       </div>
       
       {/* Decorative Elements for Depth */}
@@ -120,7 +120,7 @@ export const HeroSection = () => {
     </section>
 
     {/* Screenshots Section - Below Hero */}
-    <section className="py-20 bg-gradient-to-b from-[#28024D] via-[#1F0238] to-[#1C0232] relative">
+    <section className="py-20 relative overflow-hidden" style={{ background: 'radial-gradient(120% 90% at 50% 10%, #2a0a4a 0%, #1a062e 50%, #12031f 100%)' }}>
       <div className="container mx-auto px-6">
         {/* Section Title */}
         <div className="text-center mb-16 space-y-4">

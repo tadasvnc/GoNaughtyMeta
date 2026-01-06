@@ -32,7 +32,7 @@ export const FinalCTASection = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-pink-600 via-purple-600 to-pink-600 relative overflow-hidden" data-download-section>
+    <section className="py-24 relative overflow-hidden" style={{ background: 'radial-gradient(120% 80% at 50% 50%, #c026d3 0%, #9333ea 40%, #7c3aed 100%)' }} data-download-section>
       {/* Decorative background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/30"></div>
       <div className="absolute inset-0 overflow-hidden">

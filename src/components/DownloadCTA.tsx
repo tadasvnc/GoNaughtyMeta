@@ -31,7 +31,7 @@ export const DownloadCTA = () => {
     }
   };
   return (
-    <section className="py-20 bg-gradient-to-b from-[#1C0232] via-[#28024D] to-[#1F0238] relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden" style={{ background: 'radial-gradient(120% 80% at 50% 40%, #1a062e 0%, #12031f 50%, #0a0118 100%)' }}>
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-10 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
