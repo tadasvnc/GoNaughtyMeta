@@ -76,14 +76,14 @@ export const HeroSection = () => {
           {/* Headline */}
           <div className="space-y-4">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-white drop-shadow-2xl">
-              Transform Your{" "}
+              Turn Any Night Into the{" "}
               <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
-                Date Nights
+                Best Date Ever
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/95 leading-relaxed max-w-3xl mx-auto drop-shadow-lg font-medium">
-              The ultimate couples game with <span className="text-pink-300 font-bold">1,500+ spicy challenges</span> and <span className="text-purple-300 font-bold">1,000+ intimate questions</span>
+              Fun challenges and deep questions that help you <span className="text-pink-300 font-bold">laugh more</span> and <span className="text-purple-300 font-bold">feel closer</span>—all in one simple app
             </p>
           </div>
           
@@ -111,7 +111,7 @@ export const HeroSection = () => {
                 </span>
               </div>
               <div className="text-sm md:text-base text-white/80">
-                <span className="font-bold text-white">52,000+</span> happy couples
+                <span className="font-bold text-white">52,000+ couples</span> already playing
               </div>
             </div>
           </div>
