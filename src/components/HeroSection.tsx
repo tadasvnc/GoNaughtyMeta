@@ -148,10 +148,10 @@ export const HeroSection = () => {
               ]}
               className="w-full overflow-visible"
             >
-              <CarouselContent className="-ml-4 md:-ml-6 overflow-visible">
+              <CarouselContent className="-ml-4 md:-ml-6 overflow-visible py-8">
                 {screenshots.map((screenshot, index) => (
-                  <CarouselItem key={index} className="pl-4 md:pl-6 basis-1/2 md:basis-1/2 lg:basis-1/3 overflow-visible">
-                    <div className="flex flex-col items-center group">
+                  <CarouselItem key={index} className="pl-4 md:pl-6 basis-1/2 md:basis-1/2 lg:basis-1/3 overflow-visible py-8">
+                    <div className="flex flex-col items-center group py-4">
                       <div className="relative w-full max-w-md transition-all duration-300 group-hover:scale-110 group-hover:z-50">
                         {/* Glow effect */}
                         <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
