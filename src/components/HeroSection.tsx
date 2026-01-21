@@ -42,9 +42,9 @@ export const HeroSection = () => {
     const android = /Android/.test(navigator.userAgent);
     
     if (iOS || android) {
-      window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=cc559d90-ba1d-4a7d-a2cf-f7cd6f175652', '_blank');
+      window.open('https://apps.apple.com/us/app/dirty-sex-game-for-couples-18/id6503987806?ppid=e20110e1-56c3-478a-98c1-773988170b55', '_blank');
     } else {
-      window.open('https://apps.apple.com/us/app/sex-game-for-couples-kinky/id6503987806?ppid=cc559d90-ba1d-4a7d-a2cf-f7cd6f175652', '_blank');
+      window.open('https://apps.apple.com/us/app/dirty-sex-game-for-couples-18/id6503987806?ppid=e20110e1-56c3-478a-98c1-773988170b55', '_blank');
     }
   };
   return <>
@@ -65,55 +65,99 @@ export const HeroSection = () => {
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-6xl mx-auto text-center space-y-8">
-          {/* Trust Badge */}
-          <div className="flex items-center justify-center space-x-2 animate-fade-in">
-            <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-              <span className="text-white/90 text-sm font-medium">⭐ #1 Couples Game App</span>
-            </div>
-          </div>
-          
-          {/* Headline */}
-          <div className="space-y-4">
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight text-white drop-shadow-2xl">
-              Transform Your{" "}
-              <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
-                Date Nights
-              </span>
-            </h1>
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             
-            <p className="text-xl md:text-2xl text-white/95 leading-relaxed max-w-3xl mx-auto drop-shadow-lg font-medium">
-              The ultimate couples game with <span className="text-pink-300 font-bold">1,500+ spicy challenges</span> and <span className="text-purple-300 font-bold">1,000+ intimate questions</span>
-            </p>
-          </div>
-          
-          {/* Download Button - App Store Badge */}
-          <div className="flex flex-col items-center justify-center space-y-4">
-            <button 
-              onClick={() => handleDownloadClick('hero_app_store_badge')}
-              className="inline-block cursor-pointer transform hover:scale-110 transition-all duration-300 hover:drop-shadow-2xl animate-bounce-subtle"
-            >
-              <img 
-                src={appStoreButton}
-                alt="Download on the App Store"
-                className="h-20 md:h-24 w-auto drop-shadow-2xl"
-              />
-            </button>
-          
-            {/* Social Proof */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-              <div className="flex items-center space-x-2">
-            <div className="flex space-x-1">
-                  {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-current drop-shadow-lg" />)}
+            {/* Left Side - Text Content (60%) */}
+            <div className="flex-1 lg:w-[60%] text-center lg:text-left space-y-8">
+              {/* Trust Badge */}
+              <div className="flex items-center justify-center lg:justify-start space-x-2 animate-fade-in">
+                <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                  <span className="text-white/90 text-sm font-medium">⭐ #1 Couples Game App</span>
                 </div>
-                <span className="text-sm md:text-base text-white/90 font-semibold">
-                  4.8/5
-                </span>
               </div>
-              <div className="text-sm md:text-base text-white/80">
-                <span className="font-bold text-white">52,000+</span> happy couples
+              
+              {/* Headline */}
+              <div className="space-y-4">
+                <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white drop-shadow-2xl">
+                  Transform Your{" "}
+                  <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient">
+                    Date Nights
+                  </span>
+                </h1>
+                
+                <p className="text-lg md:text-xl lg:text-2xl text-white/95 leading-relaxed drop-shadow-lg font-medium">
+                  The ultimate couples game with <span className="text-pink-300 font-bold">1,500+ spicy challenges</span> and <span className="text-purple-300 font-bold">1,000+ intimate questions</span>
+                </p>
+              </div>
+              
+              {/* Download Button - App Store Badge */}
+              <div className="flex flex-col items-center lg:items-start space-y-4">
+                <button 
+                  onClick={() => handleDownloadClick('hero_app_store_badge')}
+                  className="inline-block cursor-pointer transform hover:scale-110 transition-all duration-300 hover:drop-shadow-2xl animate-bounce-subtle"
+                >
+                  <img 
+                    src={appStoreButton}
+                    alt="Download on the App Store"
+                    className="h-16 md:h-20 lg:h-24 w-auto drop-shadow-2xl"
+                  />
+                </button>
+              
+                {/* Social Proof */}
+                <div className="flex flex-col md:flex-row items-center lg:items-start gap-4 md:gap-8">
+                  <div className="flex items-center space-x-2">
+                    <div className="flex space-x-1">
+                      {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-current drop-shadow-lg" />)}
+                    </div>
+                    <span className="text-sm md:text-base text-white/90 font-semibold">
+                      4.8/5
+                    </span>
+                  </div>
+                  <div className="text-sm md:text-base text-white/80">
+                    <span className="font-bold text-white">52,000+</span> happy couples
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* Right Side - App Screenshots (40%) - Desktop Only */}
+            <div className="hidden lg:flex lg:w-[40%] justify-center items-center">
+              <div className="relative w-[300px] xl:w-[340px]">
+                {/* Glow Effect Behind Screenshot */}
+                <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-3xl blur-2xl animate-pulse"></div>
+                
+                {/* Screenshot Carousel - No Frame, Screenshots Already Have iPhone Frame */}
+                <div className="relative">
+                  <Carousel
+                    opts={{
+                      align: "center",
+                      loop: true,
+                    }}
+                    plugins={[
+                      Autoplay({
+                        delay: 2500,
+                        stopOnInteraction: false,
+                      }),
+                    ]}
+                    className="w-full"
+                  >
+                    <CarouselContent>
+                      {[screenshot2, screenshot3, screenshot4, screenshot5, screenshot6].map((screenshot, index) => (
+                        <CarouselItem key={index}>
+                          <img 
+                            src={screenshot} 
+                            alt={`App Screenshot ${index + 1}`}
+                            className="w-full h-auto drop-shadow-2xl"
+                          />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                  </Carousel>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
