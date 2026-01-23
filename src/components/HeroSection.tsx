@@ -66,12 +66,12 @@ export const HeroSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+          <div className="flex flex-col items-center">
             
-            {/* Left Side - Text Content (60%) */}
-            <div className="flex-1 lg:w-[60%] text-center lg:text-left space-y-8">
+            {/* Text Content - Centered */}
+            <div className="w-full max-w-4xl text-center space-y-8">
               {/* Trust Badge */}
-              <div className="flex items-center justify-center lg:justify-start space-x-2 animate-fade-in">
+              <div className="flex items-center justify-center space-x-2 animate-fade-in">
                 <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
                   <span className="text-white/90 text-sm font-medium">⭐ #1 Couples Game App</span>
                 </div>
@@ -92,7 +92,7 @@ export const HeroSection = () => {
               </div>
               
               {/* Download Button - App Store Badge */}
-              <div className="flex flex-col items-center lg:items-start space-y-4">
+              <div className="flex flex-col items-center space-y-4">
                 <button 
                   onClick={() => handleDownloadClick('hero_app_store_badge')}
                   className="inline-block cursor-pointer transform hover:scale-110 transition-all duration-300 hover:drop-shadow-2xl animate-bounce-subtle"
@@ -105,7 +105,7 @@ export const HeroSection = () => {
                 </button>
               
                 {/* Social Proof */}
-                <div className="flex flex-col md:flex-row items-center lg:items-start gap-4 md:gap-8">
+                <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
                   <div className="flex items-center space-x-2">
                     <div className="flex space-x-1">
                       {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-4 h-4 md:w-5 md:h-5 text-yellow-400 fill-current drop-shadow-lg" />)}
@@ -117,43 +117,6 @@ export const HeroSection = () => {
                   <div className="text-sm md:text-base text-white/80">
                     <span className="font-bold text-white">52,000+</span> happy couples
                   </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Side - App Screenshots (40%) - Desktop Only */}
-            <div className="hidden lg:flex lg:w-[40%] justify-center items-center">
-              <div className="relative w-[300px] xl:w-[340px]">
-                {/* Glow Effect Behind Screenshot */}
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-3xl blur-2xl animate-pulse"></div>
-                
-                {/* Screenshot Carousel - No Frame, Screenshots Already Have iPhone Frame */}
-                <div className="relative">
-                  <Carousel
-                    opts={{
-                      align: "center",
-                      loop: true,
-                    }}
-                    plugins={[
-                      Autoplay({
-                        delay: 2500,
-                        stopOnInteraction: false,
-                      }),
-                    ]}
-                    className="w-full"
-                  >
-                    <CarouselContent>
-                      {[screenshot2, screenshot3, screenshot4, screenshot5, screenshot6].map((screenshot, index) => (
-                        <CarouselItem key={index}>
-                          <img 
-                            src={screenshot} 
-                            alt={`App Screenshot ${index + 1}`}
-                            className="w-full h-auto drop-shadow-2xl"
-                          />
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                  </Carousel>
                 </div>
               </div>
             </div>
