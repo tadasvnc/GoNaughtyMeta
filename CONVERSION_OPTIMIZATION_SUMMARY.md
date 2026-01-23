@@ -111,6 +111,12 @@ Full-width conversion-focused section:
 
 Implemented across all download CTAs:
 
+**App Store Link:**
+```
+https://apps.apple.com/us/app/dirty-sex-game-for-couples-18/id6503987806?ppid=e20110e1-56c3-478a-98c1-773988170b55
+```
+
+**Device Detection Logic:**
 ```javascript
 const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 const android = /Android/.test(navigator.userAgent);
